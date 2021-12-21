@@ -2,18 +2,18 @@ const play = (()=>{
     return {
         musica: () => {
 
-            return `<iframe width="1084" height="610" src= "${musica1.getUrl()}?start=${musica1.getInicio()}"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            return `<iframe width="400" height="610" src= "${musica1.getUrl()}?start=${musica1.getInicio()}"  title="YouTube video player" frameborder="0" autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
             //return `<iframe width="1084" height="610" src= "${musica1.getUrl()}?controls=0"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 
         },
         pelicula: () => {
-            return `<iframe width="1084" height="610" src= "${pelicula1.getUrl()}?start=${pelicula1.getInicio()}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            return `<iframe width="400 height="610" src= "${pelicula1.getUrl()}?start=${pelicula1.getInicio()}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 
             //return `<iframe width="1940" height="826" src="https://www.youtube.com/embed/5PSNL1qE6VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
         },
         serie: () => {
 
-            return `<iframe width="1084" height="610" src="${serie1.getUrl()}?start=${serie1.getInicio()}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            return `<iframe width="400" height="610" src="${serie1.getUrl()}?start=${serie1.getInicio()}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
         },
     }
 })()
@@ -84,10 +84,12 @@ class Reproductor extends Multimedia {
 
 
 // instanciado
-let musica1 = new Reproductor("https://www.youtube.com/embed/4Rsi-fcGHwA", "musica")
+let musica1 = new Reproductor("https://player.vimeo.com/video/573608848?h=dc4c8e8dc2", "musica")
+//<iframe width="640" height="360" src="https://www.youtube.com/embed/_dK2tDK9grQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+//<iframe title="vimeo-player" src="https://player.vimeo.com/video/573608848?h=dc4c8e8dc2" width="640" height="480" frameborder="0" allowfullscreen></iframe>
 console.log(musica1.getUrl());//1 al buscar un metodo get de url
 
-musica1.setInicio(7)
+//musica1.setInicio(7)
 
 
 let pelicula1 = new Reproductor("https://www.youtube.com/embed/5PSNL1qE6VY", "pelicula")
@@ -100,3 +102,6 @@ pelicula1.setInicio(30)
 let serie1 = new Reproductor("https://www.youtube.com/embed/GfO-3Oir-qM", "serie")
 console.log(serie1.getUrl())
 
+// if( screen.width <= 480 ) {
+//     alert('amcho')
+// }

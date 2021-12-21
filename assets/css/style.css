@@ -5,3 +5,7 @@ body {
 img {
     width: 10%;
 }
+
+.accordion {
+    margin-left: -40px;
+}
